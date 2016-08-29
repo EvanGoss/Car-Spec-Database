@@ -11,10 +11,10 @@
 > Provide a user-friendly interface for creating a filtered list of vehicles that match desired specifications.
 
 ## How to Get Started
-> Visit www.carspecs.com
+> Visit `website URL`
 
 ## Customer Quote
-> "Carspecs.com helped me discover that there were so models that suit my needs that I would not have thought of on my own."
+> "Carspecs.com helped me discover that there were many car models that suit my needs that I would not have thought of on my own."
 
 ## Closing
-> Please visit www.carspecs.com and start searching.
+> Please visit `website URL` and start searching.
