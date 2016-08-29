@@ -2,7 +2,7 @@
 > Find cars that match your specifications.
 
 ## Summary
-> Find cars that have the combination of attributes that you're looking for such as 4 doors, at least 25 mpg, model years 2005-2014, power to weight ratio of at least 10 lbs/hp and average market value under $20,000.
+> Find cars that have the combination of attributes that you're looking for. For example: 4 doors, at least 25 mpg, model years 2005-2014, power to weight ratio of at least 10 lbs/hp and average market value under $20,000.
 
 ## Problem
 > Existing solutions do not provide access to all attributes or creation of calculated attributes such as power/weight ratio.
