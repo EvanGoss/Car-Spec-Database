@@ -10,12 +10,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="car in data.makes[18].models">
-        <!-- <tr> -->
-          <td>{{car.years[0].year}}-{{car.years[car.years.length-1].year}}</td>
-          <td>{{car.id.split('_')[0]}}</td>
-          <td>{{car.name}}</td>
-        </tr>
+        <tr ng-if="0" ng-repeat-start="make in data.makes"></tr>
+          <tr ng-repeat="car in make.models">
+            <td>{{car.years[0].year}}-{{car.years[car.years.length-1].year}}</td>
+            <td>{{car.id.split('_')[0]}}</td>
+            <td>{{car.name}}</td>
+          </tr>
+        <tr ng-if="0" ng-repeat-end></tr>
       </tbody>
     </table>
   </div>
