@@ -559,6 +559,7 @@ angular.module('app.CarsController', [])
 
   // $scope.data = masterData;
   $scope.data = masterData;
+  console.log(masterData.makes[0].models[0].name);
 });
 
 console.log('app.CarsController module loaded');
