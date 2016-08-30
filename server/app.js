@@ -6,36 +6,37 @@ var config = {
   port: 3000
 };
 
-var database = require('mongodb');
-var assert = require('assert');
-
-// Database connection URL
-var url = 'mongodb://localhost:27017/cars';
-
-var insertDocuments = function(db, callback) {
-  // Get the documents collection
-  var collection = db.collection('documents');
-  // Insert some documents
-  collection.insertMany([
-    {a : 1}, {a : 2}, {a : 3}
-  ], function(err, result) {
-    assert.equal(err, null);
-    assert.equal(3, result.result.n);
-    assert.equal(3, result.ops.length);
-    console.log(new Date(), 'Inserted 3 documents into the collection');
-    callback(result);
-  });
-};
-
-// Use connect method to connect to the server
-database.connect(url, function(err, db) {
-  assert.equal(null, err);
-  console.log(new Date(), 'Connected successfully to database');
-
-  insertDocuments(db, function() {
-    db.close();
-  });
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/cars');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function(){
+  console.log(new Date(), 'connected to database named', db.name, 'on port', db.port);
 });
+
+var makeSchema = mongoose.Schema({
+  id: Number,
+  name: String,
+  niceName: String,
+  models: Array
+});
+
+var modelSchema = mongoose.Schema({
+  id: String,
+  name: String,
+  niceName: String,
+  years: Array
+});
+
+var modelYearSchema = mongoose.Schema({
+  id: Number,
+  year: Number
+});
+
+var Make = mongoose.model('Make', makeSchema);
+var Model = mongoose.model('Model', modelSchema);
+var ModelYear = mongoose.model('ModelYear', modelYearSchema);
+
 
 // Default route test:
 // app.get('/', function(req, res) {
