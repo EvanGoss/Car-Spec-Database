@@ -1,5 +1,5 @@
 <div ng-controller="carsController">
-  I can add: {{a}} + {{b}} =  {{ a+b }}
+  Testing
 
   <div class="col-md-12">
     <table class="table table-striped">
@@ -14,7 +14,7 @@
         <tr ng-repeat="car in cars.makes.models">
           <td>Year</td>
           <td>Make</td>
-          <td>Model</td>
+          <td>{{ car.name }}</td>
         </tr>
       </tbody>
     </table>

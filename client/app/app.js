@@ -1,1 +1,4 @@
-angular.module('carSpecs', []);
+angular.module('app', [
+  'ngRoute',
+  'app.cars'
+]);

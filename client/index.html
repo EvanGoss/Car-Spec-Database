@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html ng-app="carSpecs">
+
+<html ng-app="app">
+
 <head>
   <title>Car Specification Database</title>
   <script src="/lib/angular/angular.min.js"></script>
+  <script src="/lib/angular-route/angular-route.min.js"></script>
 </head>
+
 <body>
+
   <h1>Car Specs</h1>
 
   <div ng-view></div>
 
-
   <!-- Load App (load components before main app) -->
   <script src="/app/cars/carsController.js"></script>
   <script src="/app/app.js"></script>
+
 </body>
+
 </html>
