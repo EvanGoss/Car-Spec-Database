@@ -29609,11 +29609,11 @@ var setData = function() {
         }]
     }, {
         "id": 200038885,
-        "name": "smart",
+        "name": "Smart",
         "niceName": "smart",
         "models": [{
-            "id": "smart_fortwo",
-            "name": "fortwo",
+            "id": "Smart_fortwo",
+            "name": "Fortwo",
             "niceName": "fortwo",
             "years": [{
                 "id": 100519045,
@@ -30210,7 +30210,7 @@ angular.module('app.CarsController', [])
     console.log(index, item.models.length, item.name);
   });
   // console.log($scope.data.makes);
-  // console.log(masterData.makes[0].models[0].name);
+
 });
 
 console.log('app.CarsController module loaded');
