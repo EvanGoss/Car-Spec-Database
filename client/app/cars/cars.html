@@ -10,14 +10,20 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="car in data.makes[0].models">
+        <tr ng-repeat="car in data.makes[18].models">
         <!-- <tr> -->
-          <td>{{car.years[0].year}}-{{car.years[car.years.length - 1].year}}</td>
+          <td>{{car.years[0].year}}-{{car.years[car.years.length-1].year}}</td>
           <td>{{car.id.split('_')[0]}}</td>
           <td>{{car.name}}</td>
         </tr>
       </tbody>
     </table>
   </div>
+
+<!-- <pre>
+  {{ data.makes.forEach(function(item){
+    return item.name
+  }) }}
+</pre> -->
 
 </div>
