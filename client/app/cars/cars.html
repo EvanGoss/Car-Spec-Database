@@ -1,0 +1,23 @@
+<div ng-controller="carsController">
+  I can add: {{a}} + {{b}} =  {{ a+b }}
+
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Make</th>
+          <th>Model</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="car in cars.makes.models">
+          <td>Year</td>
+          <td>Make</td>
+          <td>Model</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
