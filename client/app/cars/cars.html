@@ -1,5 +1,4 @@
 <div ng-controller="CarsController">
-  Testing
 
   <div class="col-md-12">
     <table class="table table-striped">
@@ -12,21 +11,13 @@
       </thead>
       <tbody>
         <tr ng-repeat="car in data.makes[0].models">
-        <!-- makes[0].models[0].name -->
         <!-- <tr> -->
           <td>2005</td>
           <td>Honda</td>
-          <td>{{ car.name }}</td>
-          <!-- <td>Accord</td> -->
+          <td>{{car.name}}</td>
         </tr>
       </tbody>
     </table>
   </div>
 
-<!-- <pre ng-repeat="car in cars.makes.models">
-  {{ car.makes.models }}
-
-
-</pre>
- -->
 </div>
