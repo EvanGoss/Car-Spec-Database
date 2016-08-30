@@ -1,4 +1,4 @@
-<div ng-controller="carsController">
+<div ng-controller="CarsController">
   Testing
 
   <div class="col-md-12">
@@ -12,12 +12,20 @@
       </thead>
       <tbody>
         <tr ng-repeat="car in cars.makes.models">
-          <td>Year</td>
-          <td>Make</td>
+        <!-- <tr> -->
+          <td>2005</td>
+          <td>Honda</td>
           <td>{{ car.name }}</td>
+          <!-- <td>Accord</td> -->
         </tr>
       </tbody>
     </table>
   </div>
 
+<!-- <pre ng-repeat="car in cars.makes.models">
+  {{ car.makes.models }}
+
+
+</pre>
+ -->
 </div>

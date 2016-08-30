@@ -1,4 +1,11 @@
 angular.module('app', [
   'ngRoute',
-  'app.cars'
-]);
+  'app.CarsController'
+])
+.config(function($routeProvider, $locationProvider){
+  $routeProvider
+  .when('/', {
+    templateUrl: 'app/cars/cars.html',
+    controller: 'CarsController'
+  });
+});
