@@ -10,21 +10,29 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-if="0" ng-repeat-start="make in data.makes"></tr>
+        <!-- Display 1 row for each model year (i.e. 1990 Miata, 1991 Miata, 1992 Miata) -->
+        <tr ng-if=false ng-repeat-start="make in data.makes"></tr>
+          <tr ng-if=false ng-repeat-start="car in make.models">
+            <tr ng-repeat="year in car.years">
+              <td>{{year.year}}</td>
+              <td>{{car.id.split('_')[0]}}</td>
+              <td>{{car.name}}</td>
+            </tr>
+          <tr ng-if=false ng-repeat-end></tr>
+        <tr ng-if=false ng-repeat-end></tr>
+
+        <!-- Display 1 row per car model. Year will display as a range (i.e. 1990-2005). -->
+        <!-- 
+        <tr ng-if=false ng-repeat-start="make in data.makes"></tr>
           <tr ng-repeat="car in make.models">
             <td>{{car.years[0].year}}-{{car.years[car.years.length-1].year}}</td>
             <td>{{car.id.split('_')[0]}}</td>
             <td>{{car.name}}</td>
           </tr>
-        <tr ng-if="0" ng-repeat-end></tr>
+        <tr ng-if=false ng-repeat-end></tr>
+         -->
       </tbody>
     </table>
   </div>
-
-<!-- <pre>
-  {{ data.makes.forEach(function(item){
-    return item.name
-  }) }}
-</pre> -->
 
 </div>
