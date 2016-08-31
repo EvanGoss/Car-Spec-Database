@@ -1,5 +1,4 @@
-// Go to end of file
-
+// logic is at end of file, after data
 var masterData = {};
 var setData = function() {
   // data
@@ -30197,7 +30196,7 @@ setData();
 
 angular.module('app.CarsController', [])
 
-.controller('CarsController', function($scope, $route, $routeParams, $location) {
+.controller('CarsController', function($scope, $route, $routeParams, $location, $http) {
   console.log('CarsController called');
   $scope.name = 'CarsController';
   $scope.$route = $route;
@@ -30205,11 +30204,20 @@ angular.module('app.CarsController', [])
   $scope.$routeParams = $routeParams;
 
   // $scope.data = masterData;
-  $scope.data = masterData;
-  $scope.data.makes.forEach(function(item, index){
-    console.log(index, item.models.length, item.name);
-  });
+  $scope.data = {};
+  // $scope.data.makes.forEach(function(item, index){
+  //   console.log(index, item.models.length, item.name);
+  // });
   // console.log($scope.data.makes);
+
+  $http({
+    method: 'GET',
+    url: 'https://api.edmunds.com/api/vehicle/v2/makes?view=basic&fmt=json&api_key=ch4g9wppn5vmk3n75gymmapy'
+  }).then(function successCallback(response) {
+      $scope.data = response.data;
+    }, function errorCallback(response) {
+      console.log(response);
+    });
 
 });
 
